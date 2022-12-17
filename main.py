@@ -23,6 +23,12 @@ async def msg(ctx):
     if ctx.author == bot.user:
         return
     else:
-        await ctx.send("ooh tasty :DonutLick: ")
+        await ctx.send("ooh tasty :yum: ")
 
+@bot.command(name='test')
+async def msg(ctx):
+    if ctx.author == bot.user:
+        return
+    else:
+        await ctx.send(":sob:")
 bot.run(TOKEN)
