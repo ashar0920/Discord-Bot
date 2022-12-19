@@ -1,7 +1,10 @@
 
 import discord
 import random
-import os 
+import os
+import asyncio
+import dotenv
+import sys
 from dotenv import load_dotenv
 from discord.ext import commands
 #pycord
