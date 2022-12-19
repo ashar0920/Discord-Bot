@@ -16,7 +16,7 @@ bot = commands.Bot()
 async def on_ready():
     print("Bot is ready to use!")
 
-@bot.slash_command(name="hello")
+@bot.slash_command(name="hello",description="says hello to the user")
 async def msg(ctx):
         await ctx.respond("Hey!")
 
@@ -43,7 +43,7 @@ async def msg(ctx):
         
 #peensize command
     
-@bot.slash_command(name="peensize")
+@bot.slash_command(name="peensize",description="a random peensize command")
 async def msg(ctx):
     peensize = random.randint(0,9)
     await ctx.respond(f"your peen is {peensize} inches")
