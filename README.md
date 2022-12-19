@@ -4,6 +4,5 @@
 A fantastic bot!
 
 Commands:
-- /vacuum
-- /test
 - /hello
+- /peensize
