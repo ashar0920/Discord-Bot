@@ -1,11 +1,13 @@
 
 import discord
 import random
+import os 
+from dotenv import load_dotenv
 from discord.ext import commands
 #pycord
 
 #client = discord.Client()
-TOKEN = 'MTA1MzU0MjM5MDY1NDMwODQyNA.GnQGs6.iptJpqgN-5IjKVLBuIYEb_3MlqQ2hPc7D9MM1w'
+#TOKEN = 'MTA1MzU0MjM5MDY1NDMwODQyNA.GnQGs6.iptJpqgN-5IjKVLBuIYEb_3MlqQ2hPc7D9MM1w'
 intents = discord.Intents.all()
 
 bot = commands.Bot()
@@ -48,4 +50,4 @@ async def msg(ctx):
     peensize = random.randint(0,9)
     await ctx.respond(f"your peen is {peensize} inches")
     
-bot.run(TOKEN)
+bot.run(os.getenv('DISCORD_TOKEN'))
