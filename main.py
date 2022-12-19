@@ -2,7 +2,6 @@
 import discord
 import random
 import os
-import asyncio
 import dotenv
 import sys
 from dotenv import load_dotenv
@@ -14,6 +13,8 @@ from discord.ext import commands
 intents = discord.Intents.all()
 
 bot = commands.Bot()
+load_dotenv(".env")
+TOKEN = os.getenv('TOKEN')
 #bot = discord.Bot(intents=discord.Intents.discord())
 ##client = commands.Bot(command_prefix='!')
 
@@ -53,4 +54,4 @@ async def msg(ctx):
     peensize = random.randint(0,9)
     await ctx.respond(f"your peen is {peensize} inches")
     
-bot.run(os.getenv('DISCORD_TOKEN'))
+bot.run(TOKEN)
