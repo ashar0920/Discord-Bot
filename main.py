@@ -8,20 +8,17 @@ from discord.ext import commands
 TOKEN = 'MTA1MzU0MjM5MDY1NDMwODQyNA.GnQGs6.iptJpqgN-5IjKVLBuIYEb_3MlqQ2hPc7D9MM1w'
 intents = discord.Intents.all()
 
-bot = commands.Bot(intents=intents)
+bot = commands.Bot()
 #bot = discord.Bot(intents=discord.Intents.discord())
 ##client = commands.Bot(command_prefix='!')
 
 @bot.event
 async def on_ready():
-    print('Bot is ready to use!')
+    print("Bot is ready to use!")
 
-@bot.slash_command(name='hello')
+@bot.slash_command(name="hello")
 async def msg(ctx):
-    if ctx.author == bot.user:
-        return
-    else:
-        await ctx.send("Hey!")
+        await ctx.respond("Hey!")
 
 # @bot.command(name='vacuum')
 # async def msg(ctx):
@@ -46,9 +43,9 @@ async def msg(ctx):
         
 #peensize command
     
-@bot.slash_command(name='peensize')
+@bot.slash_command(name="peensize")
 async def msg(ctx):
     peensize = random.randint(0,9)
-    await ctx.send(f"your peen is {peensize} inches")
+    await ctx.respond(f"your peen is {peensize} inches")
     
 bot.run(TOKEN)
